@@ -1,0 +1,39 @@
+.input-field-container {
+  position: relative;
+  margin-bottom: 16px;
+  width: 100%;
+
+  .input-field {
+    width: 100%;
+    background-color: #f0f0f0;
+    height: 55px;
+    border-radius: 55px;
+    border: none;
+    outline: none;
+    padding-left: 48px;
+    box-sizing: border-box;
+    font-size: 18px;
+  }
+
+  .error-text {
+    padding: 4px 16px 0;
+    font-size: 12px;
+    color: red;
+  }
+
+  .error-input {
+    border: 1px solid red;
+  }
+
+  input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px #f0f0f0 inset;
+  }
+
+  .icon-input {
+    position: absolute;
+    left: 20px;
+    top: 18px;
+    background: none;
+    color: #acacac;
+  }
+}

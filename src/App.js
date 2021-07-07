@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import routes from "./routers";
+import CircleBackground from "./components/circleBackground";
+import "./styles.scss";
+import Footer from "./components/footer";
+import Header from "./components/header";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <CircleBackground />
+        <Header />
+        <Switch>
+          {routes.map(({ path, component }, idx) => {
+            return (
+              <Route key={idx} path={path} exact>
+                {component}
+              </Route>
+            );
+          })}
+        </Switch>
+        <Footer />
+      </Router>
     </div>
   );
 }

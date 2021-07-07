@@ -1,0 +1,21 @@
+.circle-container {
+  position: absolute;
+  height: 2000px;
+  width: 1989px;
+  top: -10%;
+  right: 58%;
+  transform: translateY(-50%);
+  background-color: #2371ff;
+  border-radius: 50%;
+}
+
+@media (max-width: 1024px) {
+  .circle-container {
+    display: none;
+  }
+}
+
+.left-position {
+  right: 0;
+  left: 58%;
+}
